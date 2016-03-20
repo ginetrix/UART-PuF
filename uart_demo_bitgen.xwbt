@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.ncd
+OUTFILE=C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg324
+WORKINGDIR=C:\Users\Arte\Documents\GitHub\UART_Testing
+LICENSE=WebPack
+USER_INFO=211172232_0_0_134

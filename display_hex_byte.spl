@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=hex_byte[7:0]=
+[Outputs]
+=segments[7:0]=
+=segments_enable[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel display_hex_byte
+

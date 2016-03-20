@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Arte/Documents/GitHub/UART_Testing/dsfs_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="dsfs" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/dsfs/Tx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Tx</obj_property>
+      <obj_property name="ObjectShortName">Tx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[0:7]</obj_property>
+      <obj_property name="ObjectShortName">LED[0:7]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/SevenSegment" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SevenSegment[7:0]</obj_property>
+      <obj_property name="ObjectShortName">SevenSegment[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/SevenSegmentEnable" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SevenSegmentEnable[2:0]</obj_property>
+      <obj_property name="ObjectShortName">SevenSegmentEnable[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/CLK_100MHz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK_100MHz</obj_property>
+      <obj_property name="ObjectShortName">CLK_100MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/Switch" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Switch[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Switch[5:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dsfs/Rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Rx</obj_property>
+      <obj_property name="ObjectShortName">Rx</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,695 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: uart_demo.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "uart_demo.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "uart_demo"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : uart_demo
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" into library work
+Parsing verilog file "ipcore_dir/osdvu/uart.v" included at line 19.
+Parsing module <uart>.
+Parsing verilog file "ipcore_dir/mimas_v2_hex_display/display_hex_byte.v" included at line 20.
+Parsing module <display_hex_byte>.
+Parsing module <nibble_to_segments>.
+Parsing module <uart_demo>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 56: Port rx_samples is not connected to this instance
+
+Elaborating module <uart_demo>.
+
+Elaborating module <display_hex_byte(refresh_rate=1000,sys_clk_freq=100000000)>.
+
+Elaborating module <nibble_to_segments>.
+
+Elaborating module <uart(baud_rate=19200,sys_clk_freq=100000000)>.
+WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 118: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 273: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 286: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 291: Result of 18-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 66: Size mismatch in connection of port <tx_bit>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 68: Size mismatch in connection of port <rx_byte>. Formal port size is 64-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 68: Assignment to rx_byte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 69: Assignment to is_receiving ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 71: Assignment to recv_error ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 74: Assignment to tx_bit ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 36: Net <rx_bytes[7]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <uart_demo>.
+    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v".
+WARNING:Xst:647 - Input <Switch<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Switch<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_byte> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_samples> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_sample_countdown> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <is_receiving> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <recv_error> of the instance <uart0> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <rx_bytes<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <LED>.
+    Found 1-bit register for signal <transmit>.
+    Found 8-bit register for signal <display_byte>.
+    Summary:
+	inferred  17 D-type flip-flop(s).
+Unit <uart_demo> synthesized.
+
+Synthesizing Unit <display_hex_byte>.
+    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
+        refresh_rate = 1000
+        sys_clk_freq = 100000000
+    Found 8-bit register for signal <segments_out>.
+    Found 3-bit register for signal <segments_enable_out>.
+    Found 32-bit register for signal <divider>.
+    Found 32-bit adder for signal <divider[31]_GND_2_o_add_4_OUT> created at line 55.
+    Found 32-bit comparator greater for signal <divider[31]_GND_2_o_LessThan_4_o> created at line 53
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <segments_enable_out> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  43 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <display_hex_byte> synthesized.
+
+Synthesizing Unit <nibble_to_segments>.
+    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
+    Found 16x8-bit Read Only RAM for signal <segments_out>
+    Summary:
+	inferred   1 RAM(s).
+Unit <nibble_to_segments> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/osdvu/uart.v".
+        baud_rate = 19200
+        sys_clk_freq = 100000000
+    Found 2-bit register for signal <tx_state>.
+    Found 17-bit register for signal <rx_clk>.
+    Found 13-bit register for signal <tx_clk>.
+    Found 64-bit register for signal <rx_data>.
+    Found 4-bit register for signal <rx_samples>.
+    Found 4-bit register for signal <rx_sample_countdown>.
+    Found 4-bit register for signal <rx_bits_remaining>.
+    Found 4-bit register for signal <tx_bits_remaining>.
+    Found 2-bit register for signal <tx_out>.
+    Found 2-bit register for signal <tx_data>.
+    Found 3-bit register for signal <recv_state>.
+    Found 17-bit subtractor for signal <rx_clk[16]_GND_4_o_sub_10_OUT> created at line 145.
+    Found 13-bit subtractor for signal <tx_clk[12]_GND_4_o_sub_13_OUT> created at line 149.
+    Found 4-bit subtractor for signal <rx_sample_countdown[3]_GND_4_o_sub_31_OUT> created at line 192.
+    Found 4-bit subtractor for signal <rx_bits_remaining[3]_GND_4_o_sub_40_OUT> created at line 210.
+    Found 4-bit subtractor for signal <tx_bits_remaining[3]_GND_4_o_sub_68_OUT> created at line 283.
+    Found 4-bit adder for signal <rx_samples[3]_GND_4_o_add_28_OUT> created at line 189.
+    Found 3-bit 8-to-1 multiplexer for signal <recv_state[2]_GND_4_o_wide_mux_54_OUT> created at line 155.
+    Found 17-bit 7-to-1 multiplexer for signal <recv_state[2]_rx_clk[16]_wide_mux_55_OUT> created at line 155.
+    Found 2-bit 4-to-1 multiplexer for signal <tx_state[1]_GND_4_o_wide_mux_79_OUT> created at line 263.
+    Found 13-bit 3-to-1 multiplexer for signal <tx_state[1]_tx_clk[12]_wide_mux_82_OUT> created at line 263.
+    Found 4-bit comparator greater for signal <GND_4_o_rx_samples[3]_LessThan_39_o> created at line 201
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 119 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  30 Multiplexer(s).
+Unit <uart> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port Read Only RAM                    : 2
+# Adders/Subtractors                                   : 7
+ 13-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 3
+# Registers                                            : 17
+ 1-bit register                                        : 1
+ 13-bit register                                       : 1
+ 17-bit register                                       : 1
+ 2-bit register                                        : 3
+ 3-bit register                                        : 2
+ 32-bit register                                       : 1
+ 4-bit register                                        : 4
+ 64-bit register                                       : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 30
+ 13-bit 2-to-1 multiplexer                             : 3
+ 13-bit 3-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 6
+ 17-bit 7-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 5
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <tx_data_0> (without init value) has a constant value of 1 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tx_data_1> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <tx_out_1> of sequential type is unconnected in block <uart0>.
+
+Synthesizing (advanced) Unit <display_hex_byte>.
+The following registers are absorbed into counter <divider>: 1 register on signal <divider>.
+Unit <display_hex_byte> synthesized (advanced).
+
+Synthesizing (advanced) Unit <nibble_to_segments>.
+INFO:Xst:3231 - The small RAM <Mram_segments_out> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <nibble>        |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <segments_out>  |          |
+    -----------------------------------------------------------------------
+Unit <nibble_to_segments> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart>.
+The following registers are absorbed into counter <tx_bits_remaining>: 1 register on signal <tx_bits_remaining>.
+Unit <uart> synthesized (advanced).
+WARNING:Xst:2677 - Node <tx_out_1> of sequential type is unconnected in block <uart>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x8-bit single-port distributed Read Only RAM        : 2
+# Adders/Subtractors                                   : 5
+ 13-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+# Registers                                            : 142
+ Flip-Flops                                            : 142
+# Comparators                                          : 2
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+# Multiplexers                                         : 30
+ 1-bit 2-to-1 multiplexer                              : 2
+ 13-bit 2-to-1 multiplexer                             : 3
+ 13-bit 3-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 6
+ 17-bit 7-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 5
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <tx_data_0> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tx_data_1> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <segments_out_0> (without init value) has a constant value of 0 in block <display_hex_byte>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tx_out_0> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <segments_out_1> in Unit <display_hex_byte> is equivalent to the following FF/Latch, which will be removed : <segments_enable_out_2> 
+INFO:Xst:2261 - The FF/Latch <segments_out_2> in Unit <display_hex_byte> is equivalent to the following 2 FFs/Latches, which will be removed : <segments_out_3> <segments_out_5> 
+INFO:Xst:2261 - The FF/Latch <segments_out_4> in Unit <display_hex_byte> is equivalent to the following 2 FFs/Latches, which will be removed : <segments_out_6> <segments_out_7> 
+
+Optimizing unit <uart_demo> ...
+
+Optimizing unit <display_hex_byte> ...
+
+Optimizing unit <uart> ...
+WARNING:Xst:2677 - Node <transmit> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_63> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_62> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_61> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_60> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_59> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_58> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_57> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_56> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_55> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_54> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_53> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_52> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_51> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_50> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_49> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_48> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_47> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_46> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_45> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_44> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_43> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_42> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_41> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_40> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_39> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_38> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_37> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_36> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_35> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_34> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_33> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_32> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_31> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_30> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_29> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_28> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_27> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_26> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_25> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_24> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_23> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_22> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_21> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_20> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_19> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_18> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_17> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_16> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_15> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_14> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_13> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_12> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_11> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_10> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_9> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_8> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_7> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_6> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_5> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_4> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_data_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_sample_countdown_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_sample_countdown_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_sample_countdown_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_sample_countdown_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_samples_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_samples_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_samples_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_samples_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_bits_remaining_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_bits_remaining_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_bits_remaining_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_bits_remaining_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_16> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_15> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_14> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_13> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_12> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_11> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_10> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_9> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_8> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_7> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_6> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_5> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_4> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/rx_clk_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_12> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_11> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_10> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_9> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_8> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_7> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_6> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_5> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_4> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_3> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_clk_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_state_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/tx_state_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/recv_state_2> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/recv_state_1> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:2677 - Node <uart0/recv_state_0> of sequential type is unconnected in block <uart_demo>.
+WARNING:Xst:1710 - FF/Latch <hex_display/divider_31> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_30> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_29> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_28> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_27> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_26> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_25> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_24> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_23> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_22> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_21> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_20> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_19> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_18> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_17> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hex_display/divider_16> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block uart_demo, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : uart_demo.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 89
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 16
+#      LUT2                        : 16
+#      LUT3                        : 5
+#      LUT4                        : 2
+#      LUT5                        : 4
+#      MUXCY                       : 22
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 21
+#      FD                          : 16
+#      FDE                         : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              21  out of  11440     0%  
+ Number of Slice LUTs:                   49  out of   5720     0%  
+    Number used as Logic:                49  out of   5720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     49
+   Number with an unused Flip Flop:      28  out of     49    57%  
+   Number with an unused LUT:             0  out of     49     0%  
+   Number of fully used LUT-FF pairs:    21  out of     49    42%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          28
+ Number of bonded IOBs:                  21  out of    200    10%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_100MHz                         | BUFGP                  | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.207ns (Maximum Frequency: 237.727MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.292ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_100MHz'
+  Clock period: 4.207ns (frequency: 237.727MHz)
+  Total number of paths / destination ports: 760 / 26
+-------------------------------------------------------------------------
+Delay:               4.207ns (Levels of Logic = 9)
+  Source:            hex_display/divider_4 (FF)
+  Destination:       hex_display/divider_15 (FF)
+  Source Clock:      CLK_100MHz rising
+  Destination Clock: CLK_100MHz rising
+
+  Data Path: hex_display/divider_4 to hex_display/divider_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.525   1.196  hex_display/divider_4 (hex_display/divider_4)
+     LUT5:I0->O            1   0.254   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_lut<0> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<0> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<1> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<2> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<3> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<4> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<5> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<5>)
+     MUXCY:CI->O          21   0.262   1.310  hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<6> (hex_display/Mcompar_divider[31]_GND_2_o_LessThan_4_o_cy<6>)
+     LUT2:I1->O            1   0.254   0.000  hex_display/divider_15_rstpot (hex_display/divider_15_rstpot)
+     FD:D                      0.074          hex_display/divider_15
+    ----------------------------------------
+    Total                      4.207ns (1.701ns logic, 2.506ns route)
+                                       (40.4% logic, 59.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_100MHz'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              5.292ns (Levels of Logic = 2)
+  Source:            hex_display/segments_out_1 (FF)
+  Destination:       SevenSegment<1> (PAD)
+  Source Clock:      CLK_100MHz rising
+
+  Data Path: hex_display/segments_out_1 to SevenSegment<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.525   0.875  hex_display/segments_out_1 (hex_display/segments_out_1)
+     INV:I->O              2   0.255   0.725  hex_display/segments_enable<2>1_INV_0 (SevenSegment_1_OBUF)
+     OBUF:I->O                 2.912          SevenSegment_1_OBUF (SevenSegment<1>)
+    ----------------------------------------
+    Total                      5.292ns (3.692ns logic, 1.600ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_100MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100MHz     |    4.207|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.00 secs
+ 
+--> 
+
+Total memory usage is 235256 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  187 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

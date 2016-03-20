@@ -1,0 +1,10 @@
+Running: E:\xilinxise\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Arte/Documents/GitHub/UART_Testing/asdf_isim_beh.exe -prj C:/Users/Arte/Documents/GitHub/UART_Testing/asdf_beh.prj work.asdf work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Arte/Documents/GitHub/UART_Testing/asdf.v" into library work
+Analyzing Verilog file "E:/xilinxise/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+ERROR:HDLCompiler:1654 - "C:/Users/Arte/Documents/GitHub/UART_Testing/asdf.v" Line 36: Instantiating <uut> from unknown module <display_hex_byte>
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

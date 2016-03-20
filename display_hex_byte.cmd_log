@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/Arte/Documents/GitHub/UART_Testing/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v -lang verilog -prj UART_Testing -o display_hex_byte.spl -module display_hex_byte -template E:/xilinxise/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 display_hex_byte.spl C:/Users/Arte/Documents/GitHub/UART_Testing/display_hex_byte.sym 
