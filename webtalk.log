@@ -4,7 +4,7 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=85317967940A4A469D4C093F623D1261
-ProjectIteration=23
+ProjectIteration=26
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:4 - C:/Users/Arte/Documents/GitHub/UART_Testing/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-03-20T23:40:40.  For additional details about this file, please refer to the WebTalk help file at E:/xilinxise/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - C:/test/arte_uart/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-04-15T10:34:34.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

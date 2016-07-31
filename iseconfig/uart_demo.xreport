@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-03-20T23:33:12</DateModified>
+  <DateModified>2016-04-18T11:26:40</DateModified>
   <ModuleName>uart_demo</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Arte/Documents/GitHub/UART_Testing/iseconfig/uart_demo.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Arte/Documents/GitHub/UART_Testing\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-04-15T10:24:47</SummaryTimeStamp>
+  <SavedFilePath>C:/test/arte_uart/iseconfig/uart_demo.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/test/arte_uart\</ImplementationReportsDirectory>
   <DateInitialized>2016-03-16T20:52:29</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

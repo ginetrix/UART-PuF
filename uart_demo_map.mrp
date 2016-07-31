@@ -10,7 +10,7 @@ Target Device  : xc6slx9
 Target Package : csg324
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Mar 20 23:40:06 2016
+Mapped Date    : Mon Apr 18 11:27:03 2016
 
 Design Summary
 --------------
@@ -82,8 +82,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                1.78
 
-Peak Memory Usage:  344 MB
-Total REAL time to MAP completion:  5 secs 
+Peak Memory Usage:  380 MB
+Total REAL time to MAP completion:  7 secs 
 Total CPU time to MAP completion:   5 secs 
 
 Table of Contents

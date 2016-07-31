@@ -2,9 +2,9 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-E:\xilinxise\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s
-2 -n 3 -fastpaths -xml uart_demo.twx uart_demo.ncd -o uart_demo.twr
-uart_demo.pcf -ucf mimas_v2.ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
+-n 3 -fastpaths -xml uart_demo.twx uart_demo.ncd -o uart_demo.twr uart_demo.pcf
+-ucf mimas_v2.ucf
 
 Design file:              uart_demo.ncd
 Physical constraint file: uart_demo.pcf
@@ -522,14 +522,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Mar 20 23:40:23 2016 
+Analysis completed Mon Apr 18 11:27:22 2016 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 233 MB
+Peak Memory Usage: 238 MB
 
 
 

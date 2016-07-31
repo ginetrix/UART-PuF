@@ -19,6 +19,8 @@
 `include "ipcore_dir/osdvu/uart.v"
 `include "ipcore_dir/mimas_v2_hex_display/display_hex_byte.v"
 
+
+
 module uart_demo(
 	input CLK_100MHz,
 	input [5:0] Switch,
@@ -30,6 +32,7 @@ module uart_demo(
 	);
 
 	wire reset;
+	wire retSignal;
 	reg transmit;
 	reg [1:0] tx_bit;
 	wire received;
@@ -70,13 +73,18 @@ module uart_demo(
 		.is_transmitting(is_transmitting),// Low when transmit line is idle
 		.recv_error(recv_error)           // Indicates error in receiving packet.
 	);
+	
+	//	MultiArbiter(
+	//	.bitArray(rx_bytes),                 // The master clock for this module
+	//	.retSig(retSignal)   
+	//);
 
 	always @(posedge CLK_100MHz) begin
 		if (received) begin
 			display_byte <= rx_bytes[7:0];
 			tx_bit <= rx_bytes[0];
 			LED <= rx_bytes[0];
-			transmit <= 1;
+			transmit <= retSignal;
 		end
 		if (is_transmitting) begin
 			transmit <= 0;

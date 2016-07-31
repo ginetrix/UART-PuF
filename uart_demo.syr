@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.31 secs
  
 --> Reading design: uart_demo.prj
 
@@ -105,7 +105,7 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" into library work
+Analyzing Verilog file "C:\test\arte_uart\uart_demo.v" into library work
 Parsing verilog file "ipcore_dir/osdvu/uart.v" included at line 19.
 Parsing module <uart>.
 Parsing verilog file "ipcore_dir/mimas_v2_hex_display/display_hex_byte.v" included at line 20.
@@ -116,7 +116,7 @@ Parsing module <uart_demo>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 56: Port rx_samples is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\test\arte_uart\uart_demo.v" Line 59: Port rx_samples is not connected to this instance
 
 Elaborating module <uart_demo>.
 
@@ -129,28 +129,30 @@ WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 118: Result of 2-bit ex
 WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 273: Result of 14-bit expression is truncated to fit in 13-bit target.
 WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 286: Result of 14-bit expression is truncated to fit in 13-bit target.
 WARNING:HDLCompiler:413 - "ipcore_dir/osdvu/uart.v" Line 291: Result of 18-bit expression is truncated to fit in 13-bit target.
-WARNING:HDLCompiler:189 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 66: Size mismatch in connection of port <tx_bit>. Formal port size is 2-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 68: Size mismatch in connection of port <rx_byte>. Formal port size is 64-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 68: Assignment to rx_byte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 69: Assignment to is_receiving ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 71: Assignment to recv_error ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 74: Assignment to tx_bit ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" Line 36: Net <rx_bytes[7]> does not have a driver.
+WARNING:HDLCompiler:189 - "C:\test\arte_uart\uart_demo.v" Line 69: Size mismatch in connection of port <tx_bit>. Formal port size is 2-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "C:\test\arte_uart\uart_demo.v" Line 71: Size mismatch in connection of port <rx_byte>. Formal port size is 64-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "C:\test\arte_uart\uart_demo.v" Line 71: Assignment to rx_byte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\test\arte_uart\uart_demo.v" Line 72: Assignment to is_receiving ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\test\arte_uart\uart_demo.v" Line 74: Assignment to recv_error ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\test\arte_uart\uart_demo.v" Line 82: Assignment to tx_bit ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:\test\arte_uart\uart_demo.v" Line 35: Net <retSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\test\arte_uart\uart_demo.v" Line 39: Net <rx_bytes[7]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <uart_demo>.
-    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v".
+    Related source file is "C:\test\arte_uart\uart_demo.v".
 WARNING:Xst:647 - Input <Switch<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Switch<5:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_byte> of the instance <uart0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_samples> of the instance <uart0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <rx_sample_countdown> of the instance <uart0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <is_receiving> of the instance <uart0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Arte\Documents\GitHub\UART_Testing\uart_demo.v" line 60: Output port <recv_error> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\test\arte_uart\uart_demo.v" line 63: Output port <rx_byte> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\test\arte_uart\uart_demo.v" line 63: Output port <rx_samples> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\test\arte_uart\uart_demo.v" line 63: Output port <rx_sample_countdown> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\test\arte_uart\uart_demo.v" line 63: Output port <is_receiving> of the instance <uart0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\test\arte_uart\uart_demo.v" line 63: Output port <recv_error> of the instance <uart0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <rx_bytes<7:0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <retSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 8-bit register for signal <LED>.
     Found 1-bit register for signal <transmit>.
     Found 8-bit register for signal <display_byte>.
@@ -159,7 +161,7 @@ WARNING:Xst:653 - Signal <rx_bytes<7:0>> is used but never assigned. This source
 Unit <uart_demo> synthesized.
 
 Synthesizing Unit <display_hex_byte>.
-    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
+    Related source file is "C:\test\arte_uart/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
         refresh_rate = 1000
         sys_clk_freq = 100000000
     Found 8-bit register for signal <segments_out>.
@@ -175,14 +177,14 @@ Synthesizing Unit <display_hex_byte>.
 Unit <display_hex_byte> synthesized.
 
 Synthesizing Unit <nibble_to_segments>.
-    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
+    Related source file is "C:\test\arte_uart/ipcore_dir/mimas_v2_hex_display/display_hex_byte.v".
     Found 16x8-bit Read Only RAM for signal <segments_out>
     Summary:
 	inferred   1 RAM(s).
 Unit <nibble_to_segments> synthesized.
 
 Synthesizing Unit <uart>.
-    Related source file is "C:\Users\Arte\Documents\GitHub\UART_Testing/ipcore_dir/osdvu/uart.v".
+    Related source file is "C:\test\arte_uart/ipcore_dir/osdvu/uart.v".
         baud_rate = 19200
         sys_clk_freq = 100000000
     Found 2-bit register for signal <tx_state>.
@@ -256,7 +258,7 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <tx_data_0> (without init value) has a constant value of 1 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <tx_data_0> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <tx_data_1> (without init value) has a constant value of 0 in block <uart0>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
@@ -274,6 +276,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without ini
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <tx_out_1> of sequential type is unconnected in block <uart0>.
 
 Synthesizing (advanced) Unit <display_hex_byte>.
@@ -337,22 +340,23 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <tx_data_0> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tx_data_1> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <LED_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <display_byte_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <display_byte_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_0> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_2> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_7> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit> (without init value) has a constant value of 0 in block <uart_demo>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <segments_out_0> (without init value) has a constant value of 0 in block <display_hex_byte>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <tx_out_0> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <segments_out_1> in Unit <display_hex_byte> is equivalent to the following FF/Latch, which will be removed : <segments_enable_out_2> 
@@ -364,7 +368,6 @@ Optimizing unit <uart_demo> ...
 Optimizing unit <display_hex_byte> ...
 
 Optimizing unit <uart> ...
-WARNING:Xst:2677 - Node <transmit> of sequential type is unconnected in block <uart_demo>.
 WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_3> of sequential type is unconnected in block <uart_demo>.
 WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_2> of sequential type is unconnected in block <uart_demo>.
 WARNING:Xst:2677 - Node <uart0/tx_bits_remaining_1> of sequential type is unconnected in block <uart_demo>.
@@ -682,14 +685,14 @@ CLK_100MHz     |    4.207|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.00 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.57 secs
  
 --> 
 
-Total memory usage is 235256 kilobytes
+Total memory usage is 290392 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  187 (   0 filtered)
+Number of warnings :  190 (   0 filtered)
 Number of infos    :    9 (   0 filtered)
 
